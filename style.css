@@ -1,29 +1,129 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #f5f5f5;
+}
+
+#logo-a {
+    text-decoration: none;
+    color: #333;
 }
 
 .container {
-    height: 500px;
-    width: 500px;
-    background-color: red;
-    border: 20px solid blue;
-    border-style: dotted;
-    outline: 10px solid yellow;
-    outline-style: groove;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    margin: 10px;
 }
 
-.container p {
-    text-align: justify;
-    text-align-last: justify;
-    direction: ltr;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 15px 30px;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007bff;
+}
+
+.content {
+    margin: 40px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    flex: 1;
+}
+
+.card-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #666;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        margin: 0 15px;
+    }
+}
