@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    border: 20px solid blue;
+    border-style: dotted;
+    outline: 10px solid yellow;
+    outline-style: groove;
+    padding: 20px;
+    margin: 10px;
+}
+
+.container p {
+    text-align: justify;
+    text-align-last: justify;
+    direction: ltr;
+}
+
