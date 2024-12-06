@@ -1,9 +1,11 @@
 <html lang="en">
 
+</html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Twitter</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /*
@@ -31,7 +33,7 @@
             margin: 0px;
             height: 200px;
             width: 200px;
-            background-color: #0077B5;
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,18 +41,33 @@
             position: relative;
         }
 
-        .container .logo h1 {
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            vertical-align: text-bottom;
 
+        .x-shape::before {
+            content: '';
+            position: absolute;
+            height: 100px;
+            width: 10px;
+            background-color: white;
+            border: 1px solid white;
+            transform: skew(-40deg);
+            left: 50%;
+            top: 50%;
+            margin-left: -10px;
+            margin-top: -50px;
         }
 
-        .container .logo .text {
-            font-size: 10rem;
-            padding-top: 75px;
+        .x-shape::after {
+            content: '';
+            position: absolute;
+            height: 100px;
+            width: 15px;
+            background-color: black;
+            border: 5px solid white;
+            transform: skew(35deg);
+            left: 50%;
+            top: 50%;
+            margin-left: -10px;
+            margin-top: -50px;
         }
     </style>
 
@@ -68,7 +85,7 @@
     </nav>
     <div class="container">
         <div class="logo">
-            <h1 class="text">in</h1>
+            <div class="x-shape"></div>
         </div>
     </div>
 
